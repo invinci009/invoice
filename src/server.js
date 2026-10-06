@@ -3,7 +3,7 @@ const { app, store } = require('./app');
 
 (async () => {
   await store.init();
-  const server = app.listen(PORT, () => console.log(`Invoice app (${NODE_ENV}, ${store.kind}) running at http://localhost:${PORT}\nDefault login: admin@business.local / admin123`));
+  const server = app.listen(PORT, () => console.log(`Invoice app (${NODE_ENV}, ${store.kind}) running at http://localhost:${PORT}`));
 
   // Graceful shutdown (flush SQLite WAL on container stop)
   function shutdown(signal) {
