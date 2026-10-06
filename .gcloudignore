@@ -1,0 +1,17 @@
+# Excluded from Cloud Functions deployment packaging.
+.git/
+.gitignore
+node_modules/
+data.db*
+uploads/
+invoices/
+backups/
+.env
+*.log
+template-*.png
+template-*.pdf
+notax.*
+rupee.*
+qr.png
+test-*.pdf
+home.html

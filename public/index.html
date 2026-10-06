@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#134E4A">
+<title>Invoice Manager — Billing & Receivables</title>
+<link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+<div id="login-view" class="login-wrap">
+  <div class="login-card">
+    <div class="login-brand"><div class="brand-mark">◈</div><div><h1>Invoice Manager</h1><p>Billing & Receivables System</p></div></div>
+    <form id="login-form">
+      <label>Email<input id="login-email" type="email" value="admin@business.local" required autocomplete="username"></label>
+      <label>Password<input id="login-password" type="password" value="admin123" required autocomplete="current-password"></label>
+      <button type="submit" class="btn primary" id="login-btn">Sign in</button>
+      <p class="muted small">Default: admin@business.local / admin123</p>
+      <p id="login-error" class="error"></p>
+    </form>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <aside id="sidebar">
+    <div class="side-brand"><div class="brand-mark">◈</div><span>Invoice Manager</span>
+      <button id="side-close" class="icon-btn only-mobile">✕</button>
+    </div>
+    <nav id="nav"></nav>
+    <div class="side-foot"><div id="user-box"></div><button id="logout-btn" class="btn ghost sm">Logout</button></div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button id="menu-btn" class="icon-btn only-mobile">☰</button>
+      <h2 id="page-title">Dashboard</h2>
+      <div class="top-actions"><span id="qr-badge" class="pill"></span><button class="btn primary sm" data-nav="new">+ New Invoice</button></div>
+    </header>
+    <main id="view"></main>
+  </div>
+  <nav id="bottomnav" aria-label="Primary"></nav>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+
+<script src="app.js?v=3"></script>
+</body>
+</html>
